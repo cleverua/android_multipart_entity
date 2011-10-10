@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+	<LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:padding="10dip">
+	    
+<TableLayout 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dip"
+    android:stretchColumns="1"
+    android:shrinkColumns="1">
+     
+    <TableRow android:gravity="center_vertical">
+        <TextView 
+            android:text="Name:"
+            android:paddingRight="5dip"
+            android:gravity="right" 
+            android:textStyle="bold" />
+        <EditText 
+            android:text="" 
+            android:id="@+id/name"
+            android:singleLine="true"
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" />
+    </TableRow>
+    
+    <TableRow android:gravity="center_vertical">
+        <TextView 
+            android:text="Value:"
+            android:paddingRight="5dip"
+            android:gravity="right" 
+            android:textStyle="bold" />
+        <EditText 
+            android:text="" 
+            android:id="@+id/value"
+            android:singleLine="true"
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" />
+    </TableRow>
+     
+    <TableRow android:gravity="center_vertical">
+        <TextView 
+            android:text="Charset:"
+            android:paddingRight="5dip"
+            android:gravity="right" 
+            android:textStyle="bold" />
+        <EditText 
+            android:text="" 
+            android:id="@+id/charset"
+            android:singleLine="true"
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:hint="leave empty for default" />
+    </TableRow>
+</TableLayout>
+	    
+	    <Button android:id="@+id/post_btn"  
+	        android:layout_width="fill_parent" 
+	        android:layout_height="wrap_content" 
+	        android:text="POST" />
+	        
+	</LinearLayout>
+</ScrollView>
