@@ -1,0 +1,20 @@
+== DESCRIPTION
+
+The Android API provides a cool Apache HttpClient library. However for some reason MultipartEntity is not available in Android API. This project solves this by introducing a custom MultipartEntity.
+
+=== Usage
+
+The usage is similar to any other HttpEntity you would normally use with HttpClient:
+
+    HttpClient httpclient = new DefaultHttpClient();
+    HttpPost httppost = new HttpPost("http://www.yourhost.com");
+    MultipartEntity entity = new MultipartEntity();
+    entity.addPart(new StringPart("name", "Vitaliy"));
+    File imageFile = // .. get your image file
+    entity.addPart(new FilePart("picture", imageFile, null, "image/jpeg"));
+    httppost.setEntity(entity);
+    HttpResponse httpResponse = httpclient.execute(httppost);
+
+== EXAMPLES
+
+To see an example please launch the "MultipartEntity Sample" application in Android device emulator.
